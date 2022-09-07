@@ -32,7 +32,7 @@ namespace CadastroClientes
 
                 DgResultado.DataSource = DS.Tables["clientes"];
 
-
+                conn.Close();
             }
             catch (Exception erro)
             {
@@ -71,8 +71,8 @@ namespace CadastroClientes
 
                 MessageBox.Show("Dados Excluidos Com Secesso.");
 
-                
 
+                conn.Close();
             }
             catch (Exception erro)
             {
