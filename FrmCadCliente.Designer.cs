@@ -32,6 +32,7 @@ namespace CadastroClientes
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadCliente));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -43,7 +44,6 @@ namespace CadastroClientes
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAlterar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +76,17 @@ namespace CadastroClientes
             this.groupBox1.Size = new System.Drawing.Size(588, 241);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(423, 192);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(95, 23);
+            this.btnAlterar.TabIndex = 11;
+            this.btnAlterar.Text = "Salvar Alteração";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Visible = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // txtEndereco
             // 
@@ -173,17 +184,6 @@ namespace CadastroClientes
             this.label2.TabIndex = 0;
             this.label2.Text = "Nome:";
             // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Location = new System.Drawing.Point(423, 192);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(95, 23);
-            this.btnAlterar.TabIndex = 11;
-            this.btnAlterar.Text = "Salvar Alteração";
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Visible = false;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
-            // 
             // FrmCadCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,8 +191,10 @@ namespace CadastroClientes
             this.ClientSize = new System.Drawing.Size(615, 330);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCadCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Cadastre o Cliente";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

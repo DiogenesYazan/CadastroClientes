@@ -32,9 +32,9 @@ namespace CadastroClientes
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsulta));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.DgResultado = new System.Windows.Forms.DataGridView();
-            this.btnConsulta = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnConsulta = new System.Windows.Forms.Button();
+            this.DgResultado = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.alterarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,6 +54,26 @@ namespace CadastroClientes
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(262, 29);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Consulta de Clientes:";
+            // 
+            // btnConsulta
+            // 
+            this.btnConsulta.Location = new System.Drawing.Point(89, 419);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(593, 23);
+            this.btnConsulta.TabIndex = 1;
+            this.btnConsulta.Text = "Consultar";
+            this.btnConsulta.UseVisualStyleBackColor = true;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            // 
             // DgResultado
             // 
             this.DgResultado.AllowUserToAddRows = false;
@@ -66,26 +86,6 @@ namespace CadastroClientes
             this.DgResultado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgResultado.Size = new System.Drawing.Size(764, 365);
             this.DgResultado.TabIndex = 0;
-            // 
-            // btnConsulta
-            // 
-            this.btnConsulta.Location = new System.Drawing.Point(89, 419);
-            this.btnConsulta.Name = "btnConsulta";
-            this.btnConsulta.Size = new System.Drawing.Size(593, 23);
-            this.btnConsulta.TabIndex = 1;
-            this.btnConsulta.Text = "Consultar";
-            this.btnConsulta.UseVisualStyleBackColor = true;
-            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 29);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Consulta de Clientes:";
             // 
             // contextMenuStrip1
             // 
@@ -113,10 +113,13 @@ namespace CadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(799, 474);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmConsulta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Consulta de Clientes";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
